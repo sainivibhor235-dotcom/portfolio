@@ -1,0 +1,424 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   CSS VARIABLES (COLOR THEME)
+=========================== */
+:root {
+  --bg:        #F2E6DC;
+  --white:     #F2E6DC;
+  --text:      #2E2622;
+  --muted:     #000000;
+  --accent:    #4A2C21;
+  --border:    #A18C7B;
+  --tag-bg:    #F2E6DC;
+  --tag-color: #2E2622;
+}
+
+/* ===========================
+   BASE
+=========================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F9F5ED;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+nav {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0 8%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+/* ===========================
+   HERO
+=========================== */
+#hero {
+  background: linear-gradient(135deg, #F6F2EB);
+  padding: 80px 8%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  color: var(--accent);
+}
+
+.hero-content .role {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.hero-content .desc {
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #B89C82;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #000000;
+  border-color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--tag-bg);
+}
+
+/* ===========================
+   SECTION COMMON
+=========================== */
+section {
+  padding: 70px 8%;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 36px;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+.skills-section {
+  background-color: var(--white);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #B89C82;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: #F2E6DC;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   CERTIFICATIONS / BADGES
+=========================== */
+.certificate-list,
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  margin-top: 24px;
+}
+
+#badges {
+  background-color: #F5F1EA;
+}
+
+/* ===========================
+   TEMPLATES
+=========================== */
+#templates {
+  background-color: var(--white);
+}
+
+.template-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  margin-top: 24px;
+}
+
+.template-list .skill-tag {
+  margin: 0;
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+/*#projects {
+  background-color: #F5F1EA;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  border-top: 3px solid var(--accent);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-color);
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card-links {
+  display: flex;
+  gap: 14px;
+}
+
+.card-links a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+} */
+
+/* ===========================
+   CONTACT
+=========================== */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #F2E6DC;
+  border-radius: 12px;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: #4A2C27;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-value {
+  color: #2E2622;
+  font-weight: 500;
+}
+
+.contact-value a {
+  color: #4A2C21;
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #724A24;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82rem;
+}
+
+footer span {
+  color: #2E1402;
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE
+   (screens 768px and below)
+=========================== */
+@media (max-width: 768px) {
+
+  /* --- NAVBAR --- */
+  nav {
+    padding: 0 5%;
+    position: relative;
+  }
+
+  /* Nav links wrap onto their own row instead of hiding behind a menu */
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 14px 5%;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 12px;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+
+  /* --- HERO --- */
+  #hero {
+    padding: 60px 5%;
+    min-height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-content .role {
+    font-size: 1rem;
+  }
+
+  .hero-content .desc {
+    font-size: 0.9rem;
+  }
+
+  /* --- SECTIONS --- */
+  section {
+    padding: 50px 5%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  /* --- PROJECTS --- */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- BUTTONS --- */
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+}
